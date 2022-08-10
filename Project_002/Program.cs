@@ -3,7 +3,7 @@
 // 12-> 2 
 // 85 -> 8
 
-int randomNumber = new Random().Next(10, 100);
+int randomNumber = GetRandomNumber(10, 99);
 
 int firstDigit = randomNumber / 10;
 int secondDigit = randomNumber % 10;
@@ -21,4 +21,9 @@ else if (firstDigit > secondDigit)
 else
 {
     Console.WriteLine("Значения равны");
+}
+
+int GetRandomNumber(int min, int max)
+{
+    return new Random().Next(min, max + 1);
 }
