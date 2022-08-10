@@ -7,13 +7,18 @@
 int firstNumber = ReadInt("Введите первое число: ");
 int secondNumber = ReadInt("Введите второе число: ");
 
-if (firstNumber * firstNumber == secondNumber || secondNumber * secondNumber == firstNumber)
+if (IfSqr(firstNumber, secondNumber) || IfSqr(secondNumber, firstNumber))
 {
     Console.WriteLine($"Yes");
 }
 else
 {
     Console.WriteLine($"No");
+}
+
+bool IfSqr (int a, int b)
+{
+    return a * a == b;
 }
 
 int ReadInt(string message)
