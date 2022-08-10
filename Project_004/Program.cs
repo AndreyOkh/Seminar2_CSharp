@@ -3,10 +3,8 @@
 // 34, 5 -> не кратно, остаток 4 
 // 16, 4 -> кратно
 
-Console.Write("Введите первое число: ");
-int firstNumber = Convert.ToInt32(Console.ReadLine());
-Console.Write("Введите второе число: ");
-int secondNumber = Convert.ToInt32(Console.ReadLine());
+int firstNumber = ReadInt("Введите первое число: ");
+int secondNumber = ReadInt("Введите второе число: ");
 
 if (firstNumber % secondNumber == 0)
 {
@@ -15,4 +13,10 @@ if (firstNumber % secondNumber == 0)
 else
 {
     Console.WriteLine($"Число {firstNumber} не кратно {secondNumber}, остаток {firstNumber % secondNumber}");
+}
+
+int ReadInt(string message)
+{
+    Console.Write(message);
+    return Convert.ToInt32(Console.ReadLine());
 }
