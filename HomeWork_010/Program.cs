@@ -3,7 +3,6 @@
 // 782 -> 8
 // 918 -> 1
 int number = 0;
-bool succes = false;
 
 number = ReadInt("Введите трехзначное число: ");
 
